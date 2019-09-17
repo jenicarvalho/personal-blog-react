@@ -15,9 +15,21 @@ export default createGlobalStyle`
     color: #444;
     font-size: 14px;
     line-height: 20px;
+    background: #f4f4f4;
   }
+
   a {
     text-decoration: none;
     transition: all 150ms linear 0s;
+    color: #000;
+  }
+
+
+  img {
+    max-width: 100%;
+  }
+
+  :root {
+    --primary: #ff0095
   }
 `;
