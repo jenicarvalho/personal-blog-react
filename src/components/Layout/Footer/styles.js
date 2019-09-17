@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Base } from "../Base";
 
 export const Container = styled.div`
-  background: #262626;
+  background: #191919;
   padding: 40px;
   color: #fff;
   font-size: 12px;
@@ -35,7 +35,7 @@ export const LastNews = styled.div`
     display: block;
 
     &:hover {
-      color: #e91e63;
+      color: var(--primary);
     }
   }
 
