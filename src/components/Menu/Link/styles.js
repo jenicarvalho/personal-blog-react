@@ -12,7 +12,7 @@ export const MenuLink = styled(NavLink)`
 
   &:hover {
     height: 27px;
-    background: #e91e63;
+    background: var(--primary);
     color: #fff;
   }
 `;
