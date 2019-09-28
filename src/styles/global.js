@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,600&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap');
   ${normalize}
 
   * {
@@ -11,10 +11,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body, input, button {
-    font-family: 'Comfortaa', Helvetica, Sans-Serif;
-    color: #444;
-    font-size: 14px;
-    line-height: 20px;
+    font-family: 'PT Sans', sans-serif;
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-weight: 400; 
     background: #f4f4f4;
   }
 
@@ -24,12 +25,17 @@ export default createGlobalStyle`
     color: #000;
   }
 
+  h1, h2, h3, h4 {
+    letter-spacing: 0.5px
+  }
+
 
   img {
     max-width: 100%;
   }
 
   :root {
-    --primary: #ff0095
+    --primary: #8854d0;
+    --secondary: #7e4cc3;
   }
 `;
