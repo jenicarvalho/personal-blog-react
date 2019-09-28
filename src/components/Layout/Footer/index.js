@@ -11,7 +11,7 @@ export default function Footer() {
       <Container>
         <Base>
           <About>
-            <h3>Resumo</h3>
+            <h3>Sobre</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
               quo mollitia quisquam beatae? Error, ducimus repudiandae animi,
