@@ -26,6 +26,10 @@ export const ArticleBox = styled.div`
 
     a {
       padding: 2px;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 1.25rem;
+      line-height: 1.25;
+      font-weight: 700;
       &:hover {
         background: var(--primary);
         color: #fff;
@@ -53,6 +57,23 @@ export const Info = styled.div`
 export const ImageBox = styled.div`
   position: relative;
   height: 175px;
+  cursor: pointer;
+
+  &:hover:before {
+    transition: all 0.2s ease;
+    background: rgba(136, 83, 208, 0.8);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  a {
+    display: block;
+  }
 `;
 
 export const Tag = styled.div`
@@ -90,6 +111,7 @@ export const Item = styled.div`
 
     a {
       padding: 2px;
+
       &:hover {
         background: var(--primary);
         color: #fff;
