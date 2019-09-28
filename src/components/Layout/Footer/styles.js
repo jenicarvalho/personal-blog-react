@@ -5,7 +5,7 @@ export const Container = styled.div`
   background: var(--primary);
   padding: 40px;
   color: #fff;
-  font-size: 12px;
+  letter-spacing: 0.5px;
 
   ${Base} {
     display: flex;
@@ -14,6 +14,8 @@ export const Container = styled.div`
 
   h3 {
     margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
   }
 `;
 
@@ -21,7 +23,7 @@ export const About = styled.div`
   margin-right: 20px;
   flex: 0 0 30%;
   p {
-    font-size: 11px;
+    opacity: 0.7;
   }
 `;
 
