@@ -5,7 +5,7 @@ import { Container } from "./styles";
 export default function Copyright() {
   return (
     <Container>
-      <span>JeniCarvalho {"</>"} Conteúdo Para Devs</span> 👩‍💻
+      Jeniffer Carvalho {"</>"} <span>Conteúdo Para Devs</span> 👩‍💻
     </Container>
   );
 }
