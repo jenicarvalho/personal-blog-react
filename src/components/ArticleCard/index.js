@@ -8,7 +8,7 @@ export default class ArticleCard extends Component {
     return (
       <ArticleBox>
         <ImageBox>
-          <Link to="/">
+          <Link to="/post-item">
             <img src="http://lorempixel.com/400/200/" alt="lorem" />
           </Link>
           <Tag>
@@ -17,12 +17,11 @@ export default class ArticleCard extends Component {
         </ImageBox>
         <Info>
           <h2>
-            <Link to="/">Efeitos com CSS animations lorem pixel</Link>
+            <Link to="/post-item">Efeitos com CSS animations lorem pixel</Link>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            quos ducimus saepe, minima sapiente pariatur rerum consectetur
-            obcaecati .
+            This article will show you why semantics on the web is important,
+            what kind of semantic elements are built into HTML, and how you...
           </p>
           <Meta>20 de Agosto de 2019</Meta>
         </Info>
