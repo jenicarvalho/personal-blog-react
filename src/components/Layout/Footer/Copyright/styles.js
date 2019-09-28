@@ -12,7 +12,7 @@ export const Container = styled.footer`
   color: #000;
   font-size: 14px;
 
-  span {
+  small {
     border-left: 1px solid;
     margin-left: 10px;
     padding-left: 10px;
