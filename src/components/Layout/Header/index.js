@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
+import Logo from "./Logo";
+import Menu from "./Menu";
 
-import Logo from "../../Logo";
-import Menu from "../../Menu";
-
-export default function Header() {
-  return (
-    <Header>
-      <Logo />
-      <Menu />
-    </Header>
-  );
+export default class Header extends Component {
+  render() {
+    return (
+      <header>
+        <Logo />
+        <Menu />
+      </header>
+    );
+  }
 }
