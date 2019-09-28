@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Category from "../../components/Category";
 import ArticleCard from "../../components/ArticleCard";
-import { ArticleList } from "../../components/ArticleList";
 import Sidebar from "../../components/Sidebar";
 import SingleList from "../../components/SingleList";
-import ArticleHorizontal from "../../components/ArticleHorizontal";
+
+import { ArticleList } from "./styles";
 
 export default class Home extends Component {
   render() {
@@ -31,9 +31,6 @@ export default class Home extends Component {
             <SingleList />
           </div>
         </ArticleList>
-
-        <ArticleHorizontal />
-        <ArticleHorizontal />
       </>
     );
   }
