@@ -7,8 +7,23 @@ export const NavBar = styled.nav`
   background: #fff;
   box-shadow: 0px 5px 15px #54545414;
   margin-bottom: 30px;
+  
   div {
     display: flex;
     justify-content: space-between;
+  }
+  
+  a {
+  color: #201f22;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: var(--primary);
+      color: #fff;
+    }
   }
 `;
