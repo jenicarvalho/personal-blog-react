@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
   body, input, button {
     font-family: 'PT Sans', sans-serif;
-    color: #888;
+    color: #222;
     font-size: 0.9rem;
     line-height: 1.5;
     font-weight: 400; 
@@ -26,7 +26,7 @@ export default createGlobalStyle`
   }
 
   h1, h2, h3, h4 {
-    letter-spacing: 0.5px
+    letter-spacing: 0.5px;
   }
 
 
@@ -35,7 +35,7 @@ export default createGlobalStyle`
   }
 
   :root {
-    --primary: #8854d0;
-    --secondary: #7e4cc3;
+    --primary: #333;
+    --secondary: #2196f3;
   }
 `;
