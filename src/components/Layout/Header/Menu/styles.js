@@ -21,7 +21,7 @@ export const NavBar = styled.nav`
     font-weight: 700;
 
     &:hover {
-      background: var(--primary);
+      background: var(--secondary);
       color: #fff;
     }
   }

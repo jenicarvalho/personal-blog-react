@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Base } from "../Base";
 
 export const Container = styled.div`
-  background: var(--primary);
+  background: var(--secondary);
   padding: 40px;
   color: #fff;
   letter-spacing: 0.5px;
