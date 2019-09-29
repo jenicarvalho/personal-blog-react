@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 
 export const SidebarBox = styled.aside`
   border: 1px solid #eeeeee;
+  border-radius: 5px;
 
   header {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-
     border-bottom: 1px solid #eeeeee;
     background: #fafafc;
     padding: 15px 20px;
