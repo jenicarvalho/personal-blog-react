@@ -35,7 +35,7 @@ export default createGlobalStyle`
   }
 
   :root {
-    --primary: #333;
+    --primary: #3f51b5;
     --secondary: #2196f3;
   }
 `;
