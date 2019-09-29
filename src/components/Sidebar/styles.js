@@ -7,7 +7,6 @@ export const SidebarBox = styled.aside`
 
   header {
     border-bottom: 1px solid #eeeeee;
-    background: #fafafc;
     padding: 15px 20px;
   }
 
