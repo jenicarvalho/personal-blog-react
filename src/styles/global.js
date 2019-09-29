@@ -16,7 +16,7 @@ export default createGlobalStyle`
     font-size: 0.9rem;
     line-height: 1.5;
     font-weight: 400; 
-    background: #f4f4f4;
+    background: #fff;
   }
 
   a {
