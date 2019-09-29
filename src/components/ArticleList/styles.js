@@ -6,6 +6,7 @@ export const ArticleBox = styled.div`
   border-radius: 5px;
   overflow: hidden;
   margin-top: 30px;
+  border: 1px solid #eeeeee;
 
   h2 {
     font-size: 18px;
@@ -50,7 +51,6 @@ export const Meta = styled.div`
 `;
 
 export const Info = styled.div`
-  background: #fff;
   padding: 20px;
 `;
 
@@ -91,7 +91,6 @@ export const Tag = styled.div`
 `;
 
 export const List = styled.div`
-  background: #fff;
   padding: 20px;
 `;
 export const Item = styled.div`
