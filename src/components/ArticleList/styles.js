@@ -14,16 +14,6 @@ export const ArticleBox = styled.div`
     line-height: 28px;
     margin: 0;
     position: relative;
-    padding-top: 10px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      padding: 1px;
-      width: 100px;
-      background: var(--primary);
-      top: -3px;
-    }
 
     a {
       padding: 2px;
@@ -59,18 +49,6 @@ export const ImageBox = styled.div`
   height: 175px;
   cursor: pointer;
 
-  &:hover:before {
-    transition: all 0.2s ease;
-    background: rgba(136, 83, 208, 0.8);
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-
   a {
     display: block;
   }
@@ -80,7 +58,7 @@ export const Tag = styled.div`
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background: var(--primary);
+  background: #000;
   padding: 5px 15px 4px;
   border-radius: 5px;
   font-size: 12px;

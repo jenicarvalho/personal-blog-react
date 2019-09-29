@@ -11,16 +11,6 @@ export const ArticleBox = styled.div`
     line-height: 28px;
     margin: 0;
     position: relative;
-    padding-top: 10px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      padding: 1px;
-      width: 100px;
-      background: var(--primary);
-      top: -3px;
-    }
 
     a {
       padding: 2px;
@@ -70,7 +60,8 @@ export const Tag = styled.div`
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background: var(--primary);
+  background: #000;
+  color: #fff;
   padding: 5px 15px 4px;
   border-radius: 5px;
   font-size: 12px;
