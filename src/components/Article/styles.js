@@ -50,8 +50,10 @@ export const Meta = styled.div`
 `;
 
 export const Info = styled.div`
-  background: #fff;
   padding: 20px;
+  border: 1px solid #eeeeee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 `;
 
 export const ImageBox = styled.div`
