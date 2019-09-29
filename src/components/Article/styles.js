@@ -61,18 +61,6 @@ export const ImageBox = styled.div`
   height: 175px;
   cursor: pointer;
 
-  &:hover:before {
-    transition: all 0.2s ease;
-    background: rgba(136, 83, 208, 0.8);
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-
   a {
     display: block;
   }
