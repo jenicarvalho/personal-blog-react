@@ -14,7 +14,6 @@ export default function Menu() {
         <Link to="/">Performance </Link>
         <Link to="/">Carreira </Link>
         <Link to="/">Sobre </Link>
-        <Link to="/">Contato </Link>
       </Base>
     </NavBar>
   );
