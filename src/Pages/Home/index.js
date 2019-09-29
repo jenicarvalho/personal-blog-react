@@ -5,11 +5,12 @@ import Sidebar from "../../components/Sidebar";
 import ArticleList from "../../components/ArticleList";
 
 import { ArticleContainer } from "./styles";
+import { Base } from "../../components/Layout/Base";
 
 export default class Home extends Component {
   render() {
     return (
-      <>
+      <Base>
         <Category name="Últimos Artigos" />
         <ArticleContainer>
           <Article />
@@ -31,7 +32,7 @@ export default class Home extends Component {
             <ArticleList />
           </div>
         </ArticleContainer>
-      </>
+      </Base>
     );
   }
 }
