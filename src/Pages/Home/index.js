@@ -1,36 +1,36 @@
 import React, { Component } from "react";
 import Category from "../../components/Category";
-import ArticleCard from "../../components/ArticleCard";
+import Article from "../../components/Article";
 import Sidebar from "../../components/Sidebar";
-import SingleList from "../../components/SingleList";
+import ArticleList from "../../components/ArticleList";
 
-import { ArticleList } from "./styles";
+import { ArticleContainer } from "./styles";
 
 export default class Home extends Component {
   render() {
     return (
       <>
         <Category name="Últimos Artigos" />
-        <ArticleList>
-          <ArticleCard />
-          <ArticleCard />
+        <ArticleContainer>
+          <Article />
+          <Article />
           <Sidebar />
-        </ArticleList>
+        </ArticleContainer>
 
-        <ArticleList>
+        <ArticleContainer>
           <div>
             <Category name="Performance" />
-            <SingleList />
+            <ArticleList />
           </div>
           <div>
             <Category name="Carreira" />
-            <SingleList />
+            <ArticleList />
           </div>
           <div>
             <Category name="JavaScript" />
-            <SingleList />
+            <ArticleList />
           </div>
-        </ArticleList>
+        </ArticleContainer>
       </>
     );
   }
