@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ArticleBox, Tag, Info, ImageBox, Meta } from "./styles";
+import { sliceString } from "../../Helpers/functions";
 
 export default class ArticleCard extends Component {
   render() {
+    const { content } = this.props;
+
     return (
       <ArticleBox>
         <ImageBox>
-          <Link to="/post-item">
+          <Link to={`/${content.slug}`}>
             <img src="http://lorempixel.com/400/200/" alt="lorem" />
           </Link>
           <Tag>
@@ -17,12 +20,17 @@ export default class ArticleCard extends Component {
         </ImageBox>
         <Info>
           <h2>
-            <Link to="/post-item">Efeitos com CSS animations lorem pixel</Link>
+            <Link to={`/${content.slug}`}>
+              <span
+                dangerouslySetInnerHTML={{ __html: content.title.rendered }}
+              />
+            </Link>
           </h2>
-          <p>
-            This article will show you why semantics on the web is important,
-            what kind of semantic elements are built into HTML, and how you...
-          </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: sliceString(content.excerpt.rendered, 100)
+            }}
+          />
           <Meta>20 de Agosto de 2019</Meta>
         </Info>
       </ArticleBox>

@@ -6,16 +6,29 @@ import ArticleList from "../../components/ArticleList";
 
 import { ArticleContainer } from "./styles";
 import { Base } from "../../components/Layout/Base";
+import Axios from "axios";
 
 export default class Home extends Component {
+  state = {
+    posts: []
+  };
+
+  componentDidMount() {
+    Axios.get("http://jenicarvalho.com.br/wp-json/wp/v2/posts").then(posts => {
+      this.setState({ posts: posts.data });
+    });
+  }
+
   render() {
     return (
       <Base>
         <Category name="Últimos Artigos" />
         <ArticleContainer>
-          <Article />
-          <Article />
-          <Sidebar />
+          {this.state.posts.map(post => (
+            <Article content={post} />
+          ))}
+
+          {/* <Sidebar /> */}
         </ArticleContainer>
 
         <ArticleContainer>
