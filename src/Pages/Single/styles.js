@@ -43,7 +43,6 @@ export const Tags = styled.div`
 
     &:hover {
       background-color: var(--primary);
-      color: #fff;
     }
   }
 `;
@@ -68,7 +67,6 @@ export const Content = styled.div`
 
     &:hover {
       background-color: var(--secondary);
-      color: #fff;
       text-decoration: none;
     }
   }
@@ -87,4 +85,18 @@ export const MorePosts = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
   }
+`;
+
+export const Pre = styled.pre`
+  text-align: left;
+  margin: 1em 0;
+  padding: 0.5em;
+  line-height: 1.3;
+`;
+
+export const LineNo = styled.span`
+  display: inline-block;
+  width: 2em;
+  user-select: none;
+  opacity: 0.3;
 `;
