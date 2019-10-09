@@ -4,7 +4,7 @@ import { Base } from "../Base";
 export const Container = styled.div`
   background: var(--secondary);
   padding: 40px;
-  color: #fff;
+  color: #000;
   letter-spacing: 0.5px;
 
   ${Base} {
@@ -33,7 +33,7 @@ export const LastNews = styled.div`
   a {
     font-weight: 700;
     line-height: 20px;
-    color: #fff;
+    color: #000;
     display: block;
 
     &:hover {
@@ -50,7 +50,7 @@ export const LastNews = styled.div`
       width: 40%;
       margin-bottom: 10px;
       padding-bottom: 10px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       margin-right: 50px;
 
       time {
