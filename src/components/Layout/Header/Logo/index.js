@@ -4,7 +4,7 @@ import { LogoWrapper } from "./styles";
 export default class Logo extends Component {
   render() {
     return (
-      <LogoWrapper>
+      <LogoWrapper to="/">
         <h1>Jeniffer Carvalho {"</>"}</h1>
         <span>
           Conteúdo para Devs

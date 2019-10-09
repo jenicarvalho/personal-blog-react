@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(Link)`
   @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap");
 
   text-align: center;
