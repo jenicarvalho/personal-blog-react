@@ -20,7 +20,6 @@ export const ArticleBox = styled.div`
       font-weight: 700;
       &:hover {
         background: var(--primary);
-        color: #fff;
       }
     }
   }
