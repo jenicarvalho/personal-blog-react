@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FiTag } from "react-icons/fi";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import { Pre, LineNo } from "./styles";
+import axios from "axios";
+import Moment from "react-moment";
+import "moment/locale/pt";
 
+import { Pre, LineNo } from "./styles";
 import Header from "../../components/Layout/Header";
 import Footer from "../../components/Layout/Footer";
 import { Container, Tags, Image, Content, Meta, MorePosts } from "./styles";
@@ -18,7 +21,26 @@ const past = isAfter(parsedDate, new Date()); // true
 `.trim();
 
 export default class Single extends Component {
+  state = {
+    post: null
+  };
+
+  componentDidMount = async () => {
+    const slug = this.props.match.params.postslug;
+    await axios
+      .get(`http://jenicarvalho.com.br/wp-json/wp/v2/posts?slug=${slug}`)
+      .then(post => {
+        this.setState({
+          post: post.data[0]
+        });
+      });
+  };
+
   render() {
+    const { post } = this.state;
+
+    if (!post) return null;
+
     return (
       <>
         <Header />
@@ -29,20 +51,19 @@ export default class Single extends Component {
               <Link to="/">React</Link>
               <Link to="/">JavaScript</Link>
             </Tags>
-            <h1>
-              Tipos de navegação no React Native Lorem ipsum dolor sit ammet
-            </h1>
+            <h1> {post.title.rendered}</h1>
             <p>
               The right way to create your build pipeline in Docker and reduce
               the size of your images
             </p>
-            <Meta>20 de Agosto de 2019</Meta>
+            <Meta>
+              <Moment locale="pt" format="DD MMMM YYYY">
+                {post.date}
+              </Moment>
+            </Meta>
           </header>
           <Image>
-            <img
-              src="https://blog.rocketseat.com.br/content/images/2019/07/Tipos-de-navegac-a-o-no-React-Native.png"
-              alt="hero"
-            />
+            <img src={post.fimg_url} alt="hero" />
           </Image>
 
           <Highlight {...defaultProps} code={exampleCode} language="jsx">
@@ -61,22 +82,7 @@ export default class Single extends Component {
           </Highlight>
 
           <Content>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-            nam enim itaque rem nulla delectus, quae fugiat iusto, unde earum a
-            consequatur architecto at natus, non distinctio tenetur praesentium
-            accusamus. A id quisquam unde recusandae, molestias, ullam, nobis
-            dolores distinctio facilis quia quis dignissimos! Explicabo quisquam
-            iure, amet atque illo ipsam itaque in unde vel asperiores eaque aut,
-            eos commodi. Labore porro ab saepe eligendi,{" "}
-            <Link>consectetur</Link> praesentium! Ut eos placeat amet veritatis
-            tempore earum reiciendis, beatae est excepturi? Modi, distinctio eos
-            a aut qui sapiente repellat fugiat animi corporis corrupti! Nulla
-            delectus porro mollitia asperiores
-            <h2>Workflow Context API</h2>
-            deserunt vitae doloribus, dicta facere magnam, velit corporis quae
-            molestias iste dolores <Link>cumque minima quos</Link> animi.
-            Veniam, perferendis! Hic ut corporis eveniet placeat maxime
-            temporibus!
+            <span dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
           </Content>
 
           <MorePosts>
@@ -85,6 +91,7 @@ export default class Single extends Component {
           </MorePosts>
         </Container>
         <Footer />
+        )}
       </>
     );
   }
