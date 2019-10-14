@@ -49,6 +49,7 @@ export const ImageBox = styled.div`
   position: relative;
   height: 175px;
   cursor: pointer;
+  overflow: hidden;
 
   a {
     display: block;
