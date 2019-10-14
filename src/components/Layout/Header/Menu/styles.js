@@ -22,7 +22,6 @@ export const NavBar = styled.nav`
 
     &:hover {
       background: var(--secondary);
-      color: #fff;
     }
   }
 `;
