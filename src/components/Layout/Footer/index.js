@@ -23,27 +23,27 @@ export default function Footer() {
             <h3>Últimas notícias</h3>
             <ul>
               <li>
-                <Link>Noticia lorem ipsum dolor sit</Link>{" "}
+                <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
                 <time>11 de Junho de 2019</time>
               </li>
               <li>
-                <Link>Noticia lorem ipsum dolor sit</Link>{" "}
+                <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
                 <time>11 de Junho de 2019</time>
               </li>
               <li>
-                <Link>Noticia lorem ipsum dolor sit</Link>{" "}
+                <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
                 <time>11 de Junho de 2019</time>
               </li>
               <li>
-                <Link>Noticia lorem ipsum dolor sit</Link>{" "}
+                <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
                 <time>11 de Junho de 2019</time>
               </li>
               <li>
-                <Link>Noticia lorem ipsum dolor sit</Link>{" "}
+                <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
                 <time>11 de Junho de 2019</time>
               </li>
               <li>
-                <Link>Noticia lorem ipsum dolor sit</Link>{" "}
+                <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
                 <time>11 de Junho de 2019</time>
               </li>
             </ul>
