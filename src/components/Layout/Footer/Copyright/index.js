@@ -5,7 +5,7 @@ import { Container } from "./styles";
 export default function Copyright() {
   return (
     <Container>
-      Jeniffer Carvalho {"</>"} <small>Conteúdo Para Devs</small>
+      Jeniffer Carvalho {"</>"} <small> Um blog para front-enders</small>
       <span role="img" aria-label="tech-girl">
         👩‍💻
       </span>

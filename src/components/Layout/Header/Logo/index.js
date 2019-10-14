@@ -7,7 +7,7 @@ export default class Logo extends Component {
       <LogoWrapper to="/">
         <h1>Jeniffer Carvalho {"</>"}</h1>
         <span>
-          Conteúdo para Devs
+          Um blog para front-enders
           <span role="img" aria-label="tech-girl">
             👩‍💻
           </span>
