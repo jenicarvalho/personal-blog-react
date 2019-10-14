@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Moment from "react-moment";
+import "moment/locale/pt";
 
-import { ArticleBox, Tag, Info, ImageBox, Meta } from "./styles";
+import { ArticleBox, Info, ImageBox, Meta } from "./styles";
 import { sliceString } from "../../Helpers/functions";
 
 export default class ArticleCard extends Component {
@@ -12,11 +14,9 @@ export default class ArticleCard extends Component {
       <ArticleBox>
         <ImageBox>
           <Link to={`/${content.slug}`}>
+            {/* <img src={content.fimg_url} alt={content.title.rendered} /> */}
             <img src="http://lorempixel.com/400/200/" alt="lorem" />
           </Link>
-          <Tag>
-            <Link to="/">CSS</Link>
-          </Tag>
         </ImageBox>
         <Info>
           <h2>
@@ -31,7 +31,11 @@ export default class ArticleCard extends Component {
               __html: sliceString(content.excerpt.rendered, 100)
             }}
           />
-          <Meta>20 de Agosto de 2019</Meta>
+          <Meta>
+            <Moment locale="pt" format="DD [de] MMMM [de] YYYY">
+              {content.date}
+            </Moment>
+          </Meta>
         </Info>
       </ArticleBox>
     );

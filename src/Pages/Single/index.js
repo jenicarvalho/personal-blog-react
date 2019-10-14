@@ -57,7 +57,7 @@ export default class Single extends Component {
               the size of your images
             </p>
             <Meta>
-              <Moment locale="pt" format="DD MMMM YYYY">
+              <Moment locale="pt" format="DD [de] MMMM [de] YYYY">
                 {post.date}
               </Moment>
             </Meta>
