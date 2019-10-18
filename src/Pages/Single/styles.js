@@ -61,6 +61,19 @@ export const Content = styled.div`
   font-size: 18px;
   line-height: 32px;
 
+  pre {
+    color: #ccc;
+    background: rgb(40, 41, 54);
+    text-shadow: none;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.8;
+  }
+
   a {
     padding: 2px;
     border-bottom: 1px solid var(--secondary);
