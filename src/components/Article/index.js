@@ -14,8 +14,7 @@ export default class ArticleCard extends Component {
       <ArticleBox>
         <ImageBox>
           <Link to={`/${content.slug}`}>
-            {/* <img src={content.fimg_url} alt={content.title.rendered} /> */}
-            <img src="http://lorempixel.com/400/200/" alt="lorem" />
+            <img src={content.fimg_url} alt={content.title.rendered} />
           </Link>
         </ImageBox>
         <Info>
