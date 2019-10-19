@@ -27,7 +27,7 @@ export default class ArticleCard extends Component {
           </h2>
           <div
             dangerouslySetInnerHTML={{
-              __html: sliceString(content.excerpt.rendered, 100)
+              __html: sliceString(content.excerpt.rendered, 90)
             }}
           />
           <Meta>
