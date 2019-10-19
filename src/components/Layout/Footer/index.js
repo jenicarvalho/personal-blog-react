@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {FiGithub, FiLinkedin, FiTwitter} from 'react-icons/fi'
 import Copyright from "./Copyright";
 import { Base } from "../Base";
 
-import { Container, About, LastNews } from "./styles";
+import { Container, About, Social,  LastNews } from "./styles";
 
 export default function Footer() {
   return (
@@ -12,15 +13,18 @@ export default function Footer() {
         <Base>
           <About>
             <h3>Sobre</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-              quo mollitia quisquam beatae? Error, ducimus repudiandae animi,
-              atque quas impedit, necessitatibus aut beatae assumenda quisquam
-              voluptate quod magnam perspiciatis aliquam!
-            </p>
+            <p>Trabalho com desenvolvimento desde 2014, e amo Front end desde então. Atualmente meu foco é em React ⚛ e todo o seu ecossistema. </p>
+            <p>Comecei esse blog como forma de retribuir a comunidade o conhecimento que adquiri por todos esses anos. </p>
+            <h4>Quer falar comigo?</h4> <p> Mande um e-mail para me(at)jeniffer.com.br </p>
+            <h4>Redes</h4>
+            <Social>
+              <a href="https://github.com/jenicarvalho" target="_blank" rel="noopener noreferrer"><FiGithub /></a>
+              <a href="/#" target="_blank" rel="noopener noreferrer"><FiTwitter /></a>
+              <a href="https://www.linkedin.com/in/jeniffer-carvalho-front-end/" target="_blank" rel="noopener noreferrer"><FiLinkedin /></a>
+            </Social>
           </About>
           <LastNews>
-            <h3>Últimas notícias</h3>
+            <h3>Últimos Artigos</h3>
             <ul>
               <li>
                 <Link to="/">Noticia lorem ipsum dolor sit</Link>{" "}
