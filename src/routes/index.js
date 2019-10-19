@@ -11,7 +11,6 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/sobre" component={About} />
         <Route path="/categoria/:name/:category" component={CategoryList}  />
         <Route exact path="/" component={Home} />
         <Route path="/:postslug" component={Single} />
