@@ -20,7 +20,8 @@ export const NavBar = styled.nav`
     transition: all 0.2s ease-in-out;
     font-weight: 700;
 
-    &:hover {
+    &:hover,
+    &.selected {
       background: var(--secondary);
     }
   }
