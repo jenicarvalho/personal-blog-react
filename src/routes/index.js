@@ -11,8 +11,8 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/categoria" component={CategoryList} />
+        <Route path="/sobre" component={About} />
+        <Route path="/categoria/:name/:category" component={CategoryList}  />
         <Route exact path="/" component={Home} />
         <Route path="/:postslug" component={Single} />
       </Switch>
