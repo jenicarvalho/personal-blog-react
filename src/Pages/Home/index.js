@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Category from "../../components/Category";
 import Article from "../../components/Article";
 
-import { ArticleContainer } from "./styles";
+import { ArticleContainer, Pagination } from "./styles";
 import { Base } from "../../components/Layout/Base";
 import axios from "axios";
 import Header from "../../components/Layout/Header";
@@ -10,20 +10,29 @@ import Footer from "../../components/Layout/Footer";
 
 export default class Home extends Component {
   state = {
-    ultimosPosts: []
+    ultimosPosts: [],
+    currentPage: 1
   };
 
-  componentDidMount = async () => {
+  componentDidMount = () => {
+    this.requestPaged(1);
+
+  };
+
+  requestPaged = async page => {
     await axios
-      .get("http://jenicarvalho.com.br/wp-json/wp/v2/posts")
+      .get(`http://jenicarvalho.com.br/wp-json/wp/v2/posts?per_page=12&page=${page}`)
       .then(posts => {
         this.setState({
           ultimosPosts: posts.data
         });
       });
-  };
 
-  render() {
+  }
+
+
+  render() { 
+
     return (
       <>
         <Header />
@@ -37,7 +46,12 @@ export default class Home extends Component {
                 key={post.id}
               />
             ))}
+
           </ArticleContainer>
+          <Pagination>
+            <span onClick={() => this.requestPaged(1)}>1</span>
+            <span onClick={() => this.requestPaged(2)}>2</span>
+          </Pagination>
         </Base>
         <Footer />
       </>
