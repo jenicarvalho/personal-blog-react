@@ -85,7 +85,7 @@ export const LastNews = styled.div`
       padding-bottom: 10px;
 
       time {
-        font-size: 10px;
+        font-size: 12px;
         opacity: 0.5;
         font-weight: 100;
       }
