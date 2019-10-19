@@ -53,6 +53,13 @@ export const ImageBox = styled.div`
 
   a {
     display: block;
+
+    div {
+      background-size: cover;
+      width: 100%;
+      height: 175px;
+      background-position: center;
+    }
   }
 `;
 
