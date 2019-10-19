@@ -14,7 +14,7 @@ export default class ArticleCard extends Component {
       <ArticleBox>
         <ImageBox>
           <Link to={`/${content.slug}`}>
-            <img src={content.fimg_url} alt={content.title.rendered} />
+            <div style={{backgroundImage: `url(${content.fimg_url})`}} />
           </Link>
         </ImageBox>
         <Info>
