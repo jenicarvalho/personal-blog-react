@@ -22,8 +22,30 @@ export const Container = styled.div`
 export const About = styled.div`
   margin-right: 20px;
   flex: 0 0 30%;
+
+  h4 {
+    margin: 5px 0;
+  }
+
   p {
     opacity: 0.7;
+    margin: 3px 0;
+
+    strong {
+      display: block;
+    }
+  }
+`;
+
+export const Social = styled.div`
+  display: flex;
+
+  a {
+    margin-right: 20px;
+
+    svg {
+      font-size: 18px;
+    }
   }
 `;
 
