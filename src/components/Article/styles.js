@@ -11,6 +11,7 @@ export const ArticleBox = styled.div`
     line-height: 28px;
     margin: 0;
     position: relative;
+    min-height: 56px;
 
     a {
       padding: 2px;
