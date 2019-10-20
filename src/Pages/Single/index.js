@@ -4,10 +4,12 @@ import { FiTag } from "react-icons/fi";
 import axios from "axios";
 import Moment from "react-moment";
 import "moment/locale/pt";
+import {Helmet} from "react-helmet";
 
 import Header from "../../components/Layout/Header";
 import Footer from "../../components/Layout/Footer";
 import { Container, Tags, Image, Content, Meta } from "./styles";
+import { stripedHtml } from "../../Helpers/functions";
 
 export default class Single extends Component {
   state = {
@@ -33,7 +35,6 @@ export default class Single extends Component {
         categoryName: category.data.name
       });
     });
-    
   }
 
   render() {
@@ -41,8 +42,18 @@ export default class Single extends Component {
 
     if (!post) return null;
 
+    const description = stripedHtml(post.excerpt.rendered);
+    const title = stripedHtml(post.title.rendered);
+
     return (
       <>
+        <Helmet>
+          <title>{title}</title>
+          <meta
+            name="description"
+            content={description}
+          />
+        </Helmet>
         <Header />
         <Container>
           <header>
