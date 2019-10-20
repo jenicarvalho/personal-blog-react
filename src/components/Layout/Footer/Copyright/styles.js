@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from 'styled-media-query'
 
 export const Container = styled.footer`
   @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap");
@@ -19,4 +20,15 @@ export const Container = styled.footer`
     font-size: 12px;
     color: #888;
   }
+
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+
+    small {
+      border: none;
+      padding: 0;
+      margin: 0
+    }
+  `}
 `;

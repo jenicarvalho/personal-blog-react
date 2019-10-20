@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Base } from "../Base";
+import media from 'styled-media-query'
 
 export const Container = styled.div`
   background: var(--secondary);
@@ -22,6 +23,12 @@ export const Container = styled.div`
     opacity: 0.7;
     margin: 5px 0;
   }
+
+  ${media.lessThan("medium")`
+    ${Base} {
+      flex-direction: column;
+    }
+  `}
 `;
 
 export const About = styled.div`
@@ -91,4 +98,11 @@ export const LastNews = styled.div`
       }
     }
   }
+
+  ${media.lessThan("medium")`
+    margin: 20px 0;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(0,0,0, 0.1); 
+    border-bottom: 1px solid rgba(0,0,0, 0.1); 
+  `}
 `;
