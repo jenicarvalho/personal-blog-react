@@ -2,8 +2,14 @@ import styled from "styled-components";
 
 export const ArticleBox = styled.div`
   flex: 0 0 100%;
-  border-radius: 5px;
   overflow: hidden;
+  box-shadow: 4px 4px 0 2px rgba(0,0,0,0.1);
+  border: 1px solid #aaa;
+
+  &:hover {
+    box-shadow: none;
+    transition: all ease 0.25s;
+  }
 
   h2 {
     font-size: 18px;
@@ -41,9 +47,6 @@ export const Meta = styled.div`
 
 export const Info = styled.div`
   padding: 20px;
-  border: 1px solid #eeeeee;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 `;
 
 export const ImageBox = styled.div`
