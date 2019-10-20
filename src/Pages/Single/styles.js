@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from 'styled-media-query'
 
 export const Container = styled.div`
   header {
@@ -9,18 +10,28 @@ export const Container = styled.div`
       font-size: 40px;
       line-height: 45px;
       color: #333;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 22px;
       line-height: 30px;
     }
+
+    ${media.lessThan("medium")`
+      margin: 0 30px;
+      h1 {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    `}
   }
+
 `;
 export const Tags = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 10px;
 
   svg {
     margin-right: 10px;
@@ -60,6 +71,10 @@ export const Content = styled.div`
   margin: 50px auto;
   font-size: 18px;
   line-height: 32px;
+
+  ${media.lessThan("medium")`
+    margin: 30px;
+  `}
 
   pre {
     color: #ccc;
