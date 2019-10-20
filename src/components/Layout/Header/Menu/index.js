@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 import { NavBar } from "./styles";
 import { Base } from "../../Base";
 
-export default function Menu() {
+export default function Menu({responsive}) {
   return (
-    <NavBar>
+    <NavBar responsive={responsive}>
       <Base>
         <NavLink activeClassName="selected" to="/categoria/react/1">React </NavLink>
         <NavLink activeClassName="selected" to="/categoria/node/15">NODE </NavLink>
