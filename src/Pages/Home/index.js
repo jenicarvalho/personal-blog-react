@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Category from "../../components/Category";
 import Article from "../../components/Article";
+import {Helmet} from "react-helmet";
 
 import { ArticleContainer, Pagination } from "./styles";
 import { Base } from "../../components/Layout/Base";
@@ -35,6 +36,13 @@ export default class Home extends Component {
 
     return (
       <>
+        <Helmet>
+          <title>Jeniffer Carvalho Blog</title>
+          <meta
+            name="description"
+            content="Blog técnico com artigos e textos sobre o mundo Front End."
+          />
+        </Helmet>
         <Header />
         <Base>
           <Category name="Últimos Artigos" />
