@@ -14,7 +14,6 @@ import { stripedHtml } from "../../Helpers/functions";
 export default class Single extends Component {
   state = {
     post: null,
-    categoryName: '',
   };
 
   componentDidMount = async () => {
@@ -28,17 +27,10 @@ export default class Single extends Component {
       });
     });
 
-    await axios
-    .get(`http://jenicarvalho.com.br/wp-json/wp/v2/categories/${this.state.post.categories[0]}`)
-    .then(category => {
-      this.setState({
-        categoryName: category.data.name
-      });
-    });
   }
 
   render() {
-    const { post, categoryName } = this.state;
+    const { post } = this.state;
 
     if (!post) return null;
 
@@ -57,10 +49,6 @@ export default class Single extends Component {
         <Header />
         <Container>
           <header>
-            <Tags>
-              <FiTag />
-              <Link to="/">{categoryName}</Link>
-            </Tags>
             <h1> <span
                 dangerouslySetInnerHTML={{ __html: post.title.rendered }}
               /></h1>
