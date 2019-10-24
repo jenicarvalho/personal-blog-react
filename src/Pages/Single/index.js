@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { FiTag } from "react-icons/fi";
 import axios from "axios";
 import Moment from "react-moment";
 import "moment/locale/pt";
@@ -8,7 +6,7 @@ import {Helmet} from "react-helmet";
 
 import Header from "../../components/Layout/Header";
 import Footer from "../../components/Layout/Footer";
-import { Container, Tags, Image, Content, Meta } from "./styles";
+import { Container, Image, Content, Meta } from "./styles";
 import { stripedHtml } from "../../Helpers/functions";
 
 export default class Single extends Component {
