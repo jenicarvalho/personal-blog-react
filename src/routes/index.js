@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 /** Paginas */
-import Home from "../Pages/Home";
-import Single from "../Pages/Single";
-import CategoryList from "../Pages/CategoryList";
+import Home from "../pages/Home";
+import Single from "../pages/Single";
+import CategoryList from "../pages/CategoryList";
 
 const Routes = () => {
   return (
