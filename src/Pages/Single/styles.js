@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Container = styled.div`
   header {
     max-width: 760px;
-    margin: 0 auto;
+    margin: 40px auto;
 
     h1 {
       font-size: 40px;
