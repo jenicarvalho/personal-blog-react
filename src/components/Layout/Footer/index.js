@@ -15,7 +15,7 @@ export default function Footer() {
             <h3>Sobre</h3>
             <p>Trabalho com desenvolvimento desde 2014, e amo <strong>Front end</strong> desde então. Atualmente meu foco é em React ⚛ e todo o seu ecossistema. </p>
             <p>Comecei esse blog como forma de retribuir a comunidade o conhecimento que adquiri por todos esses anos. </p>
-            <p>Então, bora estudar! 🚀</p>
+            <p>Então, bora estudar! <span role="img" aria-label="rocket"> 🚀</span></p>
           </About>
           <LastNews>
             <h3>Artigos Populares</h3>
